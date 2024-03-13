@@ -1,8 +1,6 @@
 import openai
 import streamlit as st
-import os
-from dotenv import load_dotenv
-load_dotenv()
+
 openai.api_key = st.secrets("OPENAI_API_KEY")
 
 header_style = """
