@@ -13,8 +13,8 @@ header_style = """
 """
 
 def sentiment_analyzer(input_prompt):
-    response = openai.chat.completions.create(model='gpt-3.5-turbo-0125', messages=[{'role': 'user', 'content': f'{input_prompt}'},
-                                                                                  {'role': 'system', 'content': 'You are a sentiment analyzer. You will analyze the text given to you and answer in just a single word: Positive, Negative or Neutral'}], temperature=0.1, max_tokens=1, n=1,  stop=["/n"])
+    response = openai.chat.completions.create(model='gpt-3.5-turbo-0125', messages=[{'role': 'user', 'content': f'Here is the text {input_prompt}. Tell me its sentiment: Positive, Negative, or Neutral.'},
+                                                                                  {'role': 'system', 'content': 'You are a sentiment analyzer. You will analyze the text given to you and answer in just a single word: Positive, Negative, or Neutral by understanding the underlying sentiment of the text.'}], temperature=0.1, max_tokens=1, n=1,  stop=["/n"])
     return response
 
 
