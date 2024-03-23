@@ -20,6 +20,11 @@ def sentiment_analyzer(input_prompt):
 
 def main():
     st.set_page_config("Zain's Sentiment Analyzer", page_icon="💭")
+    created_style = """
+    color: #888888; /* Light gray color */
+    font-size: 99px; /* Increased font size */
+"""
+    st.markdown("<p style='{}'>➡️created by 'Muhammad Zain Attiq'</p>".format(created_style), unsafe_allow_html=True)
     st.markdown(f"<h1 style='{header_style}'>Zain's Sentiment Analyzer</h1>", unsafe_allow_html=True)
     input_prompt = st.text_area("Enter the text: ")
     if st.button("Submit"):
